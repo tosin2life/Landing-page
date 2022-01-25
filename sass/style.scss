@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// variables
+$Pink: hsl(322, 100%, 66%);
+$VeryPaleCyan: hsl(193, 100%, 96%);
+$VeryDarkCyan: hsl(192, 100%, 9%);
+$GrayishBlue: hsl(208, 11%, 55%);
+
+html {
+  font-size: 62.5%;
+}
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.cta {
+  text-decoration: none;
+  background-color: $Pink;
+  border-radius: 50px;
+  padding: 10px 45px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  // box-shadow:
+}
+#header {
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/bg-hero-mobile.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: $VeryPaleCyan;
+  background-size: cover;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5rem;
+    .nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      max-width: 1300px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      .logo {
+        width: 100px;
+      }
+      .cta.cta-header {
+        background-color: white;
+        color: black;
+      }
+    }
+    .hero {
+      margin-top: 10rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .hero-info {
+        h1 {
+          font-size: 2.4rem;
+          font-weight: 600;
+          margin-bottom: 1.3rem;
+        }
+        p {
+          font-size: 1.6rem;
+          font-weight: 400;
+          margin-bottom: 3rem;
+        }
+        .cta-hero {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+      }
+      .hero-image {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+#cards {
+  margin-bottom: 10rem;
+  .container {
+    .card-item {
+      border-radius: 30px;
+      box-shadow: -2px 2px 20px 0px #00000013;
+      margin-top: 4rem;
+      padding: 4rem 3rem;
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: center;
+      .card-info {
+        margin-top: 5rem;
+        h3 {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 2rem;
+        }
+        p {
+          font-size: 1.45rem;
+          line-height: 2rem;
+          color: $GrayishBlue;
+        }
+      }
+    }
+  }
+}
+#card-cta {
+  display: flex;
+  margin-bottom: -100px;
+  .card {
+    border-radius: 2rem;
+    background-color: white;
+    box-shadow: -2px 2px 20px 0px #00000013;
+    padding: 4rem 1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  }
+}
+#footer {
+  background-color: $VeryDarkCyan;
+  color: white;
+  padding: 10rem 0 3rem 0;
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .footer-1 {
+      ul {
+        list-style: none;
+        // font-size: 1.2rem;
+        li {
+          margin-top: 20px;
+          .logo {
+            width: 160px;
+            margin-top: 50px;
+          }
+        }
+        .contact {
+          display: flex;
+          flex-direction: row;
+          // justify-content: start;
+          // align-items: flex-start;
+          width: 100%;
+          img {
+            width: 13px;
+            margin-top: 0.7rem;
+          }
+          p {
+            font-size: 1.5rem;
+            margin-left: 2rem;
+          }
+        }
+      }
+    }
+  }
+  .footer-2,
+  .footer-3 {
+    ul {
+      list-style: none;
+      li {
+        margin-top: 3rem;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+  .footer-4 {
+    width: 100%;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .footer-copyright {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #header {
+    background-image: url(../images/bg-hero-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    .container {
+      .hero {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        .hero-image {
+          flex: 3;
+        }
+        .hero-info {
+          flex: 2;
+          margin-right: 2rem;
+          h1 {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+  #cards {
+    .container {
+      .card-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        &:nth-child(2) {
+          flex-direction: row-reverse;
+          padding-left: 8rem;
+        }
+        .card-info {
+          padding: 0 8rem;
+
+          h3 {
+            font-size: 3rem;
+          }
+          p {
+            font-size: 1.8rem;
+            line-height: 3rem;
+          }
+        }
+      }
+    }
+  }
+  #card-cta {
+    .card {
+      padding: 5rem 10rem;
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+      }
+      a {
+        display: inline-block;
+        font-size: 2rem;
+        padding: 2rem 8rem;
+      }
+    }
+  }
+  #footer {
+    .container {
+      .footer-info {
+        flex-direction: row;
+        .footer-1,
+        .footer-2,
+        .footer-3,
+        .footer-4{
+          flex:1;
+          margin:0 3rem;
+        }
+        .footer-1{
+          flex:2.5;
+          margin-left: 0;
+        }
+        .footer-2,
+        .footer-3{
+          margin-top: 70px;
+        }
+        .footer-4{
+          margin-top: 90px;
+        }
+      }
+    }
+    .footer-copyright{
+      text-align: right;
+    }
+  }
+}
